@@ -13,8 +13,22 @@ struct HomeView: View {
             backgroundView
             VStack{
                 HeaderView()
-                ScrollView {
-                    
+                ScrollView{
+                    VStack{
+                        firstHeaderBubble
+                        
+                        ZStack {
+                            Rectangle()
+                                .fill(Color.blue)
+                                .frame(width: 200, height: 100)
+
+                            MessageBubble(isFromCurrentUser: true, radius: 10)
+                                .fill(Color.blue)
+                                .frame(width: 200, height: 100)
+                        }
+
+                    }
+                    .padding()
                 }
                 SearchView()
                     .padding(.bottom,14)
@@ -24,6 +38,25 @@ struct HomeView: View {
 }
 
 extension HomeView {
+    var firstHeaderBubble: some View{
+        HStack{
+            VStack(alignment: .leading){
+                Text("What can I do for you today?")
+                    .font(.subheadline)
+                Text("Your Personal AI Assistant")
+                    .font(.title2)
+                    .fontWeight(.medium)
+            }
+            .padding(14)
+            .padding(.horizontal)
+            //.background(.orange)
+            .cornerRadius(4)
+            .cornerRadius(0, corners: [.bottomLeft])
+            .cornerRadius(29, corners: [.topLeft])
+            Spacer()
+        }
+        
+    }
     var backgroundView: some View{
         ZStack{
             Image("bakcgroundSeamless")
