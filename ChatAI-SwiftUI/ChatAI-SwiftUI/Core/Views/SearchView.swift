@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SearchView: View {
     @State var searchText = ""
+    @State private var isTyped = false
+    
     var body: some View {
         ZStack(alignment: .leading){
             ZStack{}
@@ -22,6 +24,11 @@ struct SearchView: View {
 
             HStack{
                 TextField("", text: $searchText)
+                    .onChange(of: searchText) { newValue in
+                        withAnimation(.spring()){
+                            isTyped = newValue.isEmpty ? false : true
+                        }
+                    }
                 ZStack{
                     Image(systemName: "mic.fill")
                 }
@@ -32,10 +39,12 @@ struct SearchView: View {
                 .padding(.trailing, -14)
             }
             Text("Chat with me")
-                .frame(height: 50, alignment: .leading)
+                .frame(height: 20, alignment: .leading)
                 .padding(.horizontal, 7)
                 .background(.white)
-                .padding(.top, -50)
+                .font(Font.system(size: isTyped ? 13 : 16))
+                .padding(.top, isTyped ? -36 : 0)
+                .padding(.leading, 1)
 
         }
         .frame(height: 50, alignment: .leading)
