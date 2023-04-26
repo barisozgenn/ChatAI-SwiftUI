@@ -10,6 +10,9 @@ import SwiftUI
 struct SearchView: View {
     @State var searchText = ""
     @State private var isTyped = false
+    @State private var sendButtomImage =  "mic.fill"
+    private let sendButtomImages = ["paperplane.fill","mic.fill","stop.circle.fill"]
+    @State private var isListening = false
     
     var body: some View {
         ZStack(alignment: .leading){
@@ -27,16 +30,29 @@ struct SearchView: View {
                     .onChange(of: searchText) { newValue in
                         withAnimation(.spring()){
                             isTyped = newValue.isEmpty ? false : true
+                            
+                            sendButtomImage = isTyped ? sendButtomImages[0] :  sendButtomImages[1]
                         }
                     }
                 ZStack{
-                    Image(systemName: "mic.fill")
+                    Image(systemName: sendButtomImage)
+                        .rotationEffect(Angle(degrees: isTyped ? 45 : 0))
                 }
                 .frame(width: 50,height: 50)
                 .background(.blue)
                 .cornerRadius(14)
                 .foregroundColor(.white)
                 .padding(.trailing, -14)
+                .onTapGesture {
+                    if !isTyped {
+                        isListening.toggle()
+                        withAnimation(.spring()){
+                            sendButtomImage = isListening ? sendButtomImages[2] :  sendButtomImages[1]
+                        }
+                    }else {
+                        searchText = ""
+                    }
+                }
             }
             Text("Chat with me")
                 .frame(height: 20, alignment: .leading)
