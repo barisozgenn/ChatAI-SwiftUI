@@ -12,10 +12,15 @@ struct HeaderView: View {
         HStack{
             ZStack{
                 Circle().fill(.blue)
+                    .frame(height: 44)
+                Image("aiAssistant")
+                    .resizable()
+                    .scaledToFit()
             }
             Spacer()
             Text("Your AI Assistant")
-                .padding(.leading, -27)
+                .padding(.leading, -55)
+                .font(.title2)
             Spacer()
         }
         .padding(.horizontal,14)
