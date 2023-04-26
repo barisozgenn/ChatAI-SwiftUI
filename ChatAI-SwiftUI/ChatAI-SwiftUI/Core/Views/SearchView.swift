@@ -1,0 +1,52 @@
+//
+//  SearchView.swift
+//  ChatAI-SwiftUI
+//
+//  Created by Baris OZGEN on 26.04.2023.
+//
+
+import SwiftUI
+
+struct SearchView: View {
+    @State var searchText = ""
+    var body: some View {
+        ZStack(alignment: .leading){
+            ZStack{}
+                .frame(maxWidth: .infinity, maxHeight: 55)
+                .background(.white)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 14)
+                        .stroke(.blue, lineWidth: 1)
+                )
+                .padding(.horizontal, -14)
+
+            HStack{
+                TextField("", text: $searchText)
+                ZStack{
+                    Image(systemName: "mic.fill")
+                }
+                .frame(width: 50,height: 50)
+                .background(.blue)
+                .cornerRadius(14)
+                .foregroundColor(.white)
+                .padding(.trailing, -14)
+            }
+            Text("Chat with me")
+                .frame(height: 50, alignment: .leading)
+                .padding(.horizontal, 7)
+                .background(.white)
+                .padding(.top, -50)
+
+        }
+        .frame(height: 50, alignment: .leading)
+        .foregroundColor(.blue)
+        .padding(.horizontal, 14)
+        .padding(.horizontal, 14)
+    }
+}
+
+struct SearchView_Previews: PreviewProvider {
+    static var previews: some View {
+        SearchView()
+    }
+}
