@@ -13,9 +13,8 @@
 		AFA547B629F94C160005A256 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547B529F94C160005A256 /* HomeView.swift */; };
 		AFA547B829F94C620005A256 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547B729F94C620005A256 /* HeaderView.swift */; };
 		AFA547BA29F94DCB0005A256 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547B929F94DCB0005A256 /* SearchView.swift */; };
-		AFA547BD29F99FB10005A256 /* RoundedCornerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547BC29F99FB10005A256 /* RoundedCornerShape.swift */; };
-		AFA547BF29F99FEE0005A256 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547BE29F99FEE0005A256 /* View.swift */; };
 		AFA547C229F9A8FD0005A256 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547C129F9A8FD0005A256 /* MessageBubble.swift */; };
+		AFA547C429FA66CC0005A256 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547C329FA66CC0005A256 /* ChatBubble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +25,8 @@
 		AFA547B529F94C160005A256 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AFA547B729F94C620005A256 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		AFA547B929F94DCB0005A256 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		AFA547BC29F99FB10005A256 /* RoundedCornerShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerShape.swift; sourceTree = "<group>"; };
-		AFA547BE29F99FEE0005A256 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		AFA547C129F9A8FD0005A256 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
+		AFA547C329FA66CC0005A256 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +114,6 @@
 		AFA547B429F94BE60005A256 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				AFA547BE29F99FEE0005A256 /* View.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -124,8 +121,8 @@
 		AFA547BB29F99F9C0005A256 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				AFA547BC29F99FB10005A256 /* RoundedCornerShape.swift */,
 				AFA547C129F9A8FD0005A256 /* MessageBubble.swift */,
+				AFA547C329FA66CC0005A256 /* ChatBubble.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -202,11 +199,10 @@
 			files = (
 				AFA547BA29F94DCB0005A256 /* SearchView.swift in Sources */,
 				AFA547B629F94C160005A256 /* HomeView.swift in Sources */,
-				AFA547BF29F99FEE0005A256 /* View.swift in Sources */,
 				AFA547C229F9A8FD0005A256 /* MessageBubble.swift in Sources */,
-				AFA547BD29F99FB10005A256 /* RoundedCornerShape.swift in Sources */,
 				AFA547B829F94C620005A256 /* HeaderView.swift in Sources */,
 				AFA547A329F94B420005A256 /* ChatAI_SwiftUIApp.swift in Sources */,
+				AFA547C429FA66CC0005A256 /* ChatBubble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

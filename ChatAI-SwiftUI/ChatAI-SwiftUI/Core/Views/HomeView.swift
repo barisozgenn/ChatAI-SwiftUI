@@ -14,18 +14,15 @@ struct HomeView: View {
             VStack{
                 HeaderView()
                 ScrollView{
-                    VStack{
+                    VStack(alignment: .leading){
                         firstHeaderBubble
+                        Text("Discover your possibilities with my features!")
+                            .font(.subheadline)
+                            .padding(.vertical)
+                            .fontWeight(.semibold)
+                            .padding(.leading, 7)
                         
-                        ZStack {
-                            Rectangle()
-                                .fill(Color.blue)
-                                .frame(width: 200, height: 100)
-
-                            MessageBubble(isFromCurrentUser: true, radius: 10)
-                                .fill(Color.blue)
-                                .frame(width: 200, height: 100)
-                        }
+                    
 
                     }
                     .padding()
@@ -39,7 +36,7 @@ struct HomeView: View {
 
 extension HomeView {
     var firstHeaderBubble: some View{
-        HStack{
+        MessageBubble(direction: .left) {
             VStack(alignment: .leading){
                 Text("What can I do for you today?")
                     .font(.subheadline)
@@ -47,14 +44,14 @@ extension HomeView {
                     .font(.title2)
                     .fontWeight(.medium)
             }
-            .padding(14)
-            .padding(.horizontal)
-            //.background(.orange)
-            .cornerRadius(4)
-            .cornerRadius(0, corners: [.bottomLeft])
-            .cornerRadius(29, corners: [.topLeft])
-            Spacer()
-        }
+                          
+                                .padding(.all, 20)
+                                .padding(.horizontal)
+                                .foregroundColor(Color.black)
+                                .background(Color(.systemGray5))
+                                
+                        }
+        
         
     }
     var backgroundView: some View{
