@@ -14,6 +14,9 @@ struct SearchView: View {
     private let sendButtomImages = ["paperplane.fill","mic.fill","stop.circle.fill"]
     @State private var isListening = false
     
+    @State private var offsetX = 292.0;
+    @State private var opacity = 0.0;
+    
     var body: some View {
         ZStack(alignment: .leading){
             ZStack{}
@@ -67,6 +70,14 @@ struct SearchView: View {
         .foregroundColor(.blue)
         .padding(.horizontal, 14)
         .padding(.horizontal, 14)
+        .offset(x: offsetX)
+        .opacity(opacity)
+        .onAppear{
+            withAnimation(.spring().delay(1.58)){
+                opacity = 1
+                offsetX = 0
+            }
+        }
     }
 }
 

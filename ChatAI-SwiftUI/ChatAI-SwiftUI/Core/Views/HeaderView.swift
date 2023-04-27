@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @State private var offsetY = -72.0;
+    @State private var opacity = 0.0;
     var body: some View {
         HStack{
             ZStack{
@@ -26,7 +28,16 @@ struct HeaderView: View {
         .padding(.horizontal,14)
         .frame(height: 55)
         .background(.white)
+        .opacity(opacity)
+        .offset(y: offsetY)
+        .onAppear{
+            withAnimation(.spring()){
+                opacity = 1
+                offsetY = 0
+            }
+        }
     }
+        
 }
 
 struct HeaderView_Previews: PreviewProvider {

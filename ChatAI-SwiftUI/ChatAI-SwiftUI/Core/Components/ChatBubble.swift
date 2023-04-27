@@ -21,7 +21,7 @@ struct ChatBubble: View {
             }
             
             MessageBubble(direction: isAI ? .left : .right) {
-                VStack(alignment: .leading){
+                VStack(alignment: .leading, spacing: 7){
                     Text(isAI ? "AI" : "You")
                         .font(.subheadline)
                         .fontWeight(.bold)

@@ -15,14 +15,7 @@ struct HomeView: View {
                 HeaderView()
                 ScrollView{
                     VStack(alignment: .leading){
-                        firstHeaderBubble
-                        Text("Discover your possibilities with my features!")
-                            .font(.subheadline)
-                            .padding(.vertical)
-                            .fontWeight(.semibold)
-                            .padding(.leading, 7)
-                        
-                    
+                       ScrollHeaderView()
 
                     }
                     .padding()
@@ -35,25 +28,6 @@ struct HomeView: View {
 }
 
 extension HomeView {
-    var firstHeaderBubble: some View{
-        MessageBubble(direction: .left) {
-            VStack(alignment: .leading){
-                Text("What can I do for you today?")
-                    .font(.subheadline)
-                Text("Your Personal AI Assistant")
-                    .font(.title2)
-                    .fontWeight(.medium)
-            }
-                          
-                                .padding(.all, 20)
-                                .padding(.horizontal)
-                                .foregroundColor(Color.black)
-                                .background(Color(.systemGray5))
-                                
-                        }
-        
-        
-    }
     var backgroundView: some View{
         ZStack{
             Image("bakcgroundSeamless")
