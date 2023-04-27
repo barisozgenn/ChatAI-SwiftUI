@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ChatBubble: View {
     
-    @State var isAI : Bool = false
+    @State var isAI : Bool = true
     @State var message: String = "Baris Message will be shown here"
     @State var imageUrl: String = ""
+    @State private var opacityAndScale = 0.0
+    @State private var offsetX = 0.0
     var body: some View {
         HStack(spacing: 0){
             if(!isAI){
@@ -33,16 +35,24 @@ struct ChatBubble: View {
                             .scaledToFit()
                     }
                 }
-                
                 .padding(.all, 20)
                 .padding(.horizontal)
                 .foregroundColor(isAI ? .black : .white)
                 .background(isAI ? Color(.systemGray5) : .blue)
-                
             }
+            .scaleEffect(opacityAndScale)
+            .opacity(opacityAndScale)
+            .offset(x: offsetX)
             
             if(isAI){
                 paddingBalloon
+            }
+        }
+        .onAppear{
+            offsetX = isAI ? -229 : 229
+            withAnimation(.spring()){
+                opacityAndScale = 1
+                offsetX = 0
             }
         }
     }
