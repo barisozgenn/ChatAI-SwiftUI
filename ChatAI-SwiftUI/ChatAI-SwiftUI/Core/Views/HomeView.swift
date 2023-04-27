@@ -8,19 +8,37 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var vm = HomeViewModel()
     var body: some View {
         ZStack{
             backgroundView
             VStack{
                 HeaderView()
-                ScrollView{
-                    VStack(alignment: .leading){
-                       ScrollHeaderView()
+               
+                    ScrollView{
+                        ScrollViewReader { proxy in
+                        VStack(alignment: .leading){
+                            ScrollHeaderView()
+                            ForEach($vm.messages, id: \.id) { message in
+                                
+                                ChatBubble(isAI: message.isAI, message:message.message)
+                                    .id(message.id)
+                            }
+                        }
+                        .padding()
 
+                        .onChange(of: vm.messages.count) { _ in
+                            withAnimation(.spring()){
+                                proxy.scrollTo(vm.messages.last?.id, anchor: .bottom)
+                            }
+                        
                     }
-                    .padding()
+                    
+                   }
                 }
+                
                 SearchView()
+                    .environmentObject(vm)
                     .padding(.bottom,14)
             }
         }

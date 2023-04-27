@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ChatBubble: View {
     
-    @State var isAI : Bool = true
-    @State var message: String = "Baris Message will be shown here"
+    @Binding var isAI : Bool
+    @Binding var message: String
     @State var imageUrl: String = ""
     @State private var opacityAndScale = 0.0
     @State private var offsetX = 0.0
@@ -66,6 +66,6 @@ extension ChatBubble {
 }
 struct ChatBubble_Previews: PreviewProvider {
     static var previews: some View {
-        ChatBubble()
+        ChatBubble(isAI: .constant(true), message: .constant("Baris Message will be shown here"))
     }
 }

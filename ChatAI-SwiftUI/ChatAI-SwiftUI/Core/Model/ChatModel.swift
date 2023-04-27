@@ -6,8 +6,8 @@
 //
 
 import Foundation
-struct ChatModel {
-    let id: String
-    let isAI: Bool
-    let message: String
+struct ChatModel: Identifiable {
+    var id: String
+    var isAI: Bool
+    var message: String
 }

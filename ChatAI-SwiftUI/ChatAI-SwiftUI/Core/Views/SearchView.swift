@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchView: View {
+    @EnvironmentObject var vm : HomeViewModel
     @State var searchText = ""
     @State private var isTyped = false
     @State private var sendButtomImage =  "mic.fill"
@@ -53,6 +54,7 @@ struct SearchView: View {
                             sendButtomImage = isListening ? sendButtomImages[2] :  sendButtomImages[1]
                         }
                     }else {
+                        vm.addMessage(isAI: false, message: searchText)
                         searchText = ""
                     }
                 }
@@ -84,5 +86,6 @@ struct SearchView: View {
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView()
+            .environmentObject(HomeViewModel())
     }
 }
