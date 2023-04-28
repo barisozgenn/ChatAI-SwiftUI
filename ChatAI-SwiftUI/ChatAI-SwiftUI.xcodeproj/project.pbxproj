@@ -18,6 +18,10 @@
 		AFA547C629FA74940005A256 /* ScrollHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547C529FA74940005A256 /* ScrollHeaderView.swift */; };
 		AFA547C929FA775C0005A256 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547C829FA775C0005A256 /* ChatModel.swift */; };
 		AFA547CB29FA78850005A256 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547CA29FA78850005A256 /* HomeViewModel.swift */; };
+		AFA547CD29FBD5DE0005A256 /* AIAnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547CC29FBD5DE0005A256 /* AIAnswerModel.swift */; };
+		AFA547CF29FBD65A0005A256 /* UIColor+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547CE29FBD65A0005A256 /* UIColor+Color.swift */; };
+		AFA547D129FBFEC00005A256 /* ImageDownloadAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547D029FBFEC00005A256 /* ImageDownloadAPI.swift */; };
+		AFA547D329FC01780005A256 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA547D229FC01780005A256 /* ImageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		AFA547C529FA74940005A256 /* ScrollHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollHeaderView.swift; sourceTree = "<group>"; };
 		AFA547C829FA775C0005A256 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		AFA547CA29FA78850005A256 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AFA547CC29FBD5DE0005A256 /* AIAnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAnswerModel.swift; sourceTree = "<group>"; };
+		AFA547CE29FBD65A0005A256 /* UIColor+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Color.swift"; sourceTree = "<group>"; };
+		AFA547D029FBFEC00005A256 /* ImageDownloadAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadAPI.swift; sourceTree = "<group>"; };
+		AFA547D229FC01780005A256 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA547CA29FA78850005A256 /* HomeViewModel.swift */,
+				AFA547D229FC01780005A256 /* ImageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -116,6 +125,7 @@
 		AFA547B329F94BC90005A256 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				AFA547D029FBFEC00005A256 /* ImageDownloadAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -123,6 +133,7 @@
 		AFA547B429F94BE60005A256 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				AFA547CE29FBD65A0005A256 /* UIColor+Color.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -140,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA547C829FA775C0005A256 /* ChatModel.swift */,
+				AFA547CC29FBD5DE0005A256 /* AIAnswerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,13 +228,17 @@
 			files = (
 				AFA547BA29F94DCB0005A256 /* SearchView.swift in Sources */,
 				AFA547CB29FA78850005A256 /* HomeViewModel.swift in Sources */,
+				AFA547D129FBFEC00005A256 /* ImageDownloadAPI.swift in Sources */,
+				AFA547CF29FBD65A0005A256 /* UIColor+Color.swift in Sources */,
 				AFA547B629F94C160005A256 /* HomeView.swift in Sources */,
 				AFA547C229F9A8FD0005A256 /* MessageBubble.swift in Sources */,
+				AFA547CD29FBD5DE0005A256 /* AIAnswerModel.swift in Sources */,
 				AFA547C929FA775C0005A256 /* ChatModel.swift in Sources */,
 				AFA547B829F94C620005A256 /* HeaderView.swift in Sources */,
 				AFA547A329F94B420005A256 /* ChatAI_SwiftUIApp.swift in Sources */,
 				AFA547C429FA66CC0005A256 /* ChatBubble.swift in Sources */,
 				AFA547C629FA74940005A256 /* ScrollHeaderView.swift in Sources */,
+				AFA547D329FC01780005A256 /* ImageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ChatBubble: View {
+    @StateObject private var imageViewModel = ImageViewModel()
     
     @Binding var isAI : Bool
     @Binding var message: String
-    @State var imageUrl: String = ""
     @State private var opacityAndScale = 0.0
     @State private var offsetX = 0.0
     var body: some View {
@@ -28,11 +28,15 @@ struct ChatBubble: View {
                     Text(message)
                         .font(.headline)
                         .fontWeight(.regular)
-                    if !imageUrl.isEmpty{
+                    if message.contains("http") {
                         
-                        Image("aiAssistant")
-                            .resizable()
-                            .scaledToFit()
+                        if let image = imageViewModel.image {
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFit()
+                        } else {
+                            ProgressView()
+                        }
                     }
                 }
                 .padding(.all, 20)
@@ -53,6 +57,11 @@ struct ChatBubble: View {
             withAnimation(.spring()){
                 opacityAndScale = 1
                 offsetX = 0
+            }
+            
+            if message.contains("https") {
+                guard let url = URL(string: message) else { return }
+                imageViewModel.downloadImage(from: url)
             }
         }
     }

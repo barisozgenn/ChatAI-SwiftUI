@@ -13,7 +13,7 @@ struct HeaderView: View {
     var body: some View {
         HStack{
             ZStack{
-                Circle().fill(.blue)
+                Circle().fill(Color.theme.firstListItemColor)
                     .frame(height: 44)
                 Image("aiAssistant")
                     .resizable()

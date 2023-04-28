@@ -54,8 +54,10 @@ struct SearchView: View {
                             sendButtomImage = isListening ? sendButtomImages[2] :  sendButtomImages[1]
                         }
                     }else {
+                       
                         vm.addMessage(isAI: false, message: searchText)
                         searchText = ""
+
                     }
                 }
             }

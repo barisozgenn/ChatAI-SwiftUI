@@ -79,7 +79,7 @@ extension ScrollHeaderView {
                                 .padding(.all, 20)
                                 .padding(.horizontal)
                                 .foregroundColor(Color.black)
-                                .background(Color(.systemTeal))
+                                .background(Color.theme.firstListItemColor)
                                 
         }.frame(width: 330)
             .opacity(opacityThird)
@@ -98,7 +98,7 @@ extension ScrollHeaderView {
                                 .padding(.all, 20)
                                 .padding(.horizontal)
                                 .foregroundColor(Color.black)
-                                .background(Color(.systemTeal))
+                                .background(Color.theme.secondListItemColor)
                                 
         }.frame(width: 330)
             .opacity(opacityFourtht)
