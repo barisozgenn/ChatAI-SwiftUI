@@ -47,6 +47,7 @@
 		AFA547D429FC063A0005A256 /* OpenAIAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
 		AFA547D629FC07320005A256 /* ChatGPTModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTModel.swift; sourceTree = "<group>"; };
 		AFA547D829FC091F0005A256 /* DallEModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallEModel.swift; sourceTree = "<group>"; };
+		AFA547DA29FD08A10005A256 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		AFA547A129F94B420005A256 /* ChatAI-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				AFA547DA29FD08A10005A256 /* Info.plist */,
 				AFA547C729FA77470005A256 /* Model */,
 				AFA547B429F94BE60005A256 /* Extension */,
 				AFA547B329F94BC90005A256 /* Network */,
@@ -382,6 +384,7 @@
 				DEVELOPMENT_TEAM = SHP38F3EM7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ChatAI-SwiftUI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -411,6 +414,7 @@
 				DEVELOPMENT_TEAM = SHP38F3EM7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ChatAI-SwiftUI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

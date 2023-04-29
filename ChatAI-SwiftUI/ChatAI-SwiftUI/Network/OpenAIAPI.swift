@@ -15,10 +15,14 @@ class OpenAIAPI {
     private let token = "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"
     
     func chatGPT(prompt: String) -> AnyPublisher<String, Error> {
+        let messageModel = ["role": "user", "content": prompt]
         let parameters = [
             "model": "gpt-3.5-turbo",
-            "messages": prompt]
+            "messages": [messageModel]
+        ] as [String : Any]
+        
         let jsonData = try? JSONSerialization.data(withJSONObject: parameters)
+
         let url = URL(string: chatGTPEndpoint)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -41,7 +45,7 @@ class OpenAIAPI {
     
     func dallE(prompt: String) -> AnyPublisher<String, Error> {
         let parameters = [
-            "promp": prompt,
+            "prompt": prompt,
             "n": 1] as [String : Any]
         let jsonData = try? JSONSerialization.data(withJSONObject: parameters)
         let url = URL(string: dallEEndpoint)!

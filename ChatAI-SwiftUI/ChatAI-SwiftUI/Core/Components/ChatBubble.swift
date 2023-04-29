@@ -25,9 +25,6 @@ struct ChatBubble: View {
                     Text(isAI ? "AI" : "You")
                         .font(.subheadline)
                         .fontWeight(.bold)
-                    Text(message)
-                        .font(.headline)
-                        .fontWeight(.regular)
                     if message.contains("http") {
                         
                         if let image = imageViewModel.image {
@@ -37,6 +34,10 @@ struct ChatBubble: View {
                         } else {
                             ProgressView()
                         }
+                    } else {
+                        Text(message)
+                            .font(.headline)
+                            .fontWeight(.regular)
                     }
                 }
                 .padding(.all, 20)

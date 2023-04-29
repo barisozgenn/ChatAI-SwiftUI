@@ -11,3 +11,4 @@ struct ChatModel: Identifiable {
     var isAI: Bool
     var message: String
 }
+
