@@ -12,7 +12,7 @@ class OpenAIAPI {
     private let chatGTPEndpoint = "https://api.openai.com/v1/chat/completions"
     private let dallEEndpoint = "https://api.openai.com/v1/images/generations"
     
-    private let token = "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"
+    private let token = "here_your_api_key"
     
     func chatGPT(prompt: String) -> AnyPublisher<String, Error> {
         let messageModel = ["role": "user", "content": prompt]
